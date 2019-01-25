@@ -54,8 +54,9 @@ class Student extends Person {
     this.favSubjects = props.favSubjects;
   }
 
-  listsSubjects() {
-   return this.favSubjects.join(', ');
+  listsSubjects() { // instructions for this method were not clear
+   // return this.favSubjects.join(', ');
+    this.favSubjects.forEach(subject => console.log(subject));
   }
 
   PRAssignments(subject) {
@@ -140,16 +141,20 @@ console.log('Instructor Jane grades::', jane.grade(sammy,'React Props'));
 
 console.log('Instructor olaf speaks::', olaf.speak());
 console.log('Instructor olaf grades::', olaf.grade(jon, 'callbacks'));
-//
+
 console.log('Student Sammy speaks::', sammy.speak());
-console.log('Student Sammy Fav subjects::', sammy.listsSubjects());
-//
+// console.log('Student Sammy Fav subjects::', sammy.listsSubjects());
+console.log('Fav subjects:')
+sammy.listsSubjects();
+
 console.log('Student jon speaks::', jon.speak());
+console.log('Fav subjects:')
+jon.listsSubjects();
 console.log('Student jon PR::', jon.PRAssignments('JavaScript'));
 console.log('Student jon Sprint::', jon.sprintChallenge('React'));
-//
+
 console.log('PM Kim speaks::', kim.speak());
 console.log('PM Kim standUp::', kim.standUp('WebPT2'));
-//
+
 console.log('PM Jim speaks::', jim.speak());
 console.log('PM Jim debugsCode::', jim.debugsCode(jon, 'Java'));
